@@ -1,0 +1,103 @@
+.hero {
+    width: 100%;
+    background-image: url("/images/hero_bg.png");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+.hero_title_container {
+    width: 550px;        /* 吹き出しを入れるため、幅を固定 */
+    text-align: center;
+    margin-top: 50px;    /* 吹き出しを入れるため、大き目 */
+}
+@media (max-width: 768px) {
+    .hero_title_container {
+        width: 350px;
+    }
+}
+.hero_title {
+    font-family: 'BIZ UDPMincho', serif;
+    font-size: 48px;
+    font-weight: 600;
+    color: #b33;
+    text-shadow:
+        2px  2px 4px #fff,
+        2px -2px 4px #fff,
+        -2px  2px 4px #fff,
+        -2px -2px 4px #fff;
+}
+.hero_title_sub {
+    font-family: 'BIZ UDPMincho', serif;
+    font-size: 24px;
+    font-weight: 400;
+    color: #fff;
+    margin-top: 10px;
+    margin-left: 15px;
+    margin-right: 15px;
+    text-shadow:
+        1px  1px 2px #000,
+        1px -1px 2px #000,
+        -1px  1px 2px #000,
+        -1px -1px 2px #000;
+}
+
+.description_container {
+    width: 100%;
+    background-color: #fff9;
+    text-align: center;
+}
+.description {
+    font-size: 14px;
+    color: #000;
+    text-align: center;
+    margin-left: 40px;
+    margin-right: 40px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.speech_bubble {
+    font-family: 'BIZ UDPMincho', serif;
+    font-size: 24px;
+    position: absolute;      /* 絶対配置に設定 */
+    top:20px;              /* 親要素の上端から外側に配置 */
+    left: 30%;               /* 親要素の左から50%の位置へ */
+    transform: translateX(-50%); /* 自身の幅の半分戻して中央寄せ */
+    
+    
+    padding: 10px 20px;
+    background: var(--basic-color);
+    color: #600;
+    border-radius: 45%;
+    white-space: nowrap;     /* 改行を防ぐ */
+}
+/* 三角形の部分 */
+.speech_bubble::after {
+    content: "";
+    position: absolute;
+    top: 100%;               /* 吹き出しの底辺に配置 */
+    left: 50%;
+    transform: translateX(-50%);
+    border: 8px solid transparent;
+    border-top-color: var(--basic-color);
+  }
+
+/*
+.speech_bubble {
+    background-color: var(--basic-color);
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    border-radius: 50%;
+    font-size: 24px;
+    color: #000;
+    text-align: center;
+    margin-bottom: 20px;
+}
+*/

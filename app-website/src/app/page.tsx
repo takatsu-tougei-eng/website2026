@@ -1,12 +1,14 @@
+import Hero from "@/app/contents/Hero";
+import EventOverview from "@/app/contents/EventOverview";
+import { EventMap } from "@/app/contents/EventMap";
+import SubmitButtonArea from "@/app/contents/SubmitButtonArea";
+import HeaderLine from "@/app/contents/HeaderLine";
+import TextDescription from "@/app/contents/TextDescription";
+import WorkshopContent, { WorkshopContentProps } from "@/app/contents/WorkshopContent";
+import PhotoAndTextDescription, { PhotoAndTextDescriptionProps } from "@/app/contents/PhotoAndTextDescription";
+
 import styles from "./page.module.css";
-import Hero from "./contents/Hero";
-import EventOverview from "./contents/EventOverview";
-import { EventMap } from "./contents/EventMap";
-import SubmitButtonArea from "./contents/SubmitButtonArea";
-import HeaderLine from "./contents/HeaderLine";
-import TextDescription from "./contents/TextDescription";
-import WorkshopContent, { WorkshopContentProps } from "./contents/WorkshopContent";
-import PhotoAndTextDescription, { PhotoAndTextDescriptionProps } from "./contents/PhotoAndTextDescription";
+
 
 export default function Home() {
   const textDescription = [
@@ -42,7 +44,7 @@ export default function Home() {
       price: "4,000円/名",
       deadline: "2月28日(土)",
       applicationTitle: "電動ロクロ体験 登録",
-      applicationURL: "https://example1.com",
+      applicationURL: "/coming-soon",
       notes: [
         "4歳から小学校低学年までは保護者同伴",
         "作品は一人一品まで",
@@ -66,7 +68,7 @@ export default function Home() {
       price: "4,500円/名",
       deadline: "2月28日(土)",
       applicationTitle: "手回しロクロ体験 登録",
-      applicationURL: "https://example2.com",
+      applicationURL: "/coming-soon",
       notes: [
         "4歳から小学校低学年までは保護者同伴",
         "作品は一人一品まで",
