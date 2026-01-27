@@ -1,65 +1,126 @@
-import Image from "next/image";
 import styles from "./page.module.css";
+import Hero from "./contents/Hero";
+import EventOverview from "./contents/EventOverview";
+import { EventMap } from "./contents/EventMap";
+import SubmitButtonArea from "./contents/SubmitButtonArea";
+import HeaderLine from "./contents/HeaderLine";
+import TextDescription from "./contents/TextDescription";
+import WorkshopContent, { WorkshopContentProps } from "./contents/WorkshopContent";
+import PhotoAndTextDescription, { PhotoAndTextDescriptionProps } from "./contents/PhotoAndTextDescription";
 
 export default function Home() {
+  const textDescription = [
+    "高津のまちで、益子焼の魅力に触れる陶芸イベント\n" +
+    "「陶芸匠フェスタ in 高津」。"
+    ,
+    "益子町で活躍する陶芸作家による作品展示・販売に加え、\n" +
+    "電動ロクロや手回しロクロを使った\n" +
+    "体験型ワークショップを開催します。\n" +
+    "初心者の方や親子での参加も大歓迎です。"
+    ,
+    "当日は、クラフトや雑貨、フードが集まる\n" +
+    "「クラフトほっこりマーケット」も同時開催。\n" +
+    "陶芸だけでなく、ものづくりや人との出会いを\n" +
+    "ゆったりと楽しめる一日です。"
+  ];
+
+  const workshopContent: WorkshopContentProps[] = [
+    {
+      title: "【新企画】電動ロクロ プレミアム体験",
+      description: [
+        "匠のサポートで、理想の器を仕上げる約10分間。一度はやってみたかった「電動ロクロ」に挑戦！",
+        "グループ交代制のため実際に作る時間は短いですが、伝統工芸士が補助しますので、短時間でも立派な形に仕上がります。",
+      ],
+      date: "2026年3月8日(日)",
+      timeSchedule: [
+        ["10:00", "11:00"],
+        ["11:15", "12:15"],
+        ["13:30", "15:00"],
+      ],
+      place: "３階イベントホール",
+      capacity: [8, 8, 10],
+      price: "4,000円/名",
+      deadline: "2月28日(土)",
+      applicationTitle: "電動ロクロ体験 登録",
+      applicationURL: "https://example1.com",
+      notes: [
+        "4歳から小学校低学年までは保護者同伴",
+        "作品は一人一品まで",
+        "完成品は着払いにて発送いたします",
+      ],
+      imagePaths: ["/images/dendou1.png", "/images/dendou2.png"],
+    },
+    {
+      title: "手回しロクロ体験",
+      description: "大人数で気軽に陶芸の楽しさを味わえる、手回しロクロ体験です。",
+      date: "2026年3月8日(日)",
+      timeSchedule: [
+        ["10:00","11:00"],
+        ["11:20","12:20"],
+        ["13:20","14:20"],
+        ["14:40","15:40"],
+        ["16:00","17:00"],
+      ],
+      place: "２階イベントホール",
+      capacity: [50, 50, 50, 50, 50],
+      price: "4,500円/名",
+      deadline: "2月28日(土)",
+      applicationTitle: "手回しロクロ体験 登録",
+      applicationURL: "https://example2.com",
+      notes: [
+        "4歳から小学校低学年までは保護者同伴",
+        "作品は一人一品まで",
+        "完成品は着払いにて発送いたします",
+      ],
+      imagePaths: [
+        "/images/temawashi1.png",
+        "/images/temawashi2.png",
+        "/images/temawashi3.png",
+        "/images/temawashi4.png",
+        "/images/temawashi5.png",
+      ],
+    },
+  ];
+
+  const hokkoriMarketContent: PhotoAndTextDescriptionProps = {
+    descriptions: [
+        "「ほっこり温かな気持ちで家路についてほしい」という想いを持つ、" +
+          "こだわりの店舗が集結します。",
+        "家族みんなで心温まるひとときをお過ごしください。"
+    ],
+    imagePath: "/images/craft_hokkori_market.png",
+    imageAlt: "クラフトほっこりマーケット",
+  };
+
   return (
     <div className={styles.page}>
+      <header className={styles.header}>
+        <Hero />
+        <EventOverview />
+      </header>
       <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
+        <SubmitButtonArea targetId="workshop" />
+
+        <HeaderLine title="イベント概要" />
+        <TextDescription
+          description={textDescription}
+          imagePath="/images/experience_image.png"
         />
-        <div className={styles.intro}>
-          <h1>To get started, edit the page.tsx file.</h1>
-          <p>
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className={styles.secondary}
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
+        <EventMap />
+
+        <a id="workshop" />
+        <HeaderLine title="体験ワークショップ" />
+        <WorkshopContent
+          {...workshopContent[0]}
+        />
+        <WorkshopContent
+          {...workshopContent[1]}
+        />
+        
+        <HeaderLine title="クラフトほっこりマーケット" />
+        <PhotoAndTextDescription
+          {...hokkoriMarketContent}
+        />
       </main>
     </div>
   );

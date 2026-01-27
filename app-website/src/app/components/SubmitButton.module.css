@@ -1,0 +1,21 @@
+.submit_button_container {
+    margin: 5px 5px;
+    display: inline-block;
+}
+.submit_button {
+    padding: 10px 50px;
+    background-color: var(--button-color);
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    text-align: center;
+}
+.submit_button:hover {
+    transform: scale(1.05);
+}
+.submit_button a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
