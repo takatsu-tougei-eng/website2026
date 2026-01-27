@@ -41,8 +41,8 @@ export default function Home() {
       ],
       place: "３階イベントホール",
       capacity: [8, 8, 10],
-      price: "4,000円/名",
-      deadline: "2月28日(土)",
+      price: "6,800円/名",
+      deadline: "3月6日(金)",
       applicationTitle: "電動ロクロ体験 登録",
       applicationURL: "/coming-soon",
       notes: [
@@ -65,8 +65,8 @@ export default function Home() {
       ],
       place: "２階イベントホール",
       capacity: [50, 50, 50, 50, 50],
-      price: "4,500円/名",
-      deadline: "2月28日(土)",
+      price: "4,800円/名",
+      deadline: "3月6日(金)",
       applicationTitle: "手回しロクロ体験 登録",
       applicationURL: "/coming-soon",
       notes: [
