@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Geist, Geist_Mono } from "next/font/google";
 
+import GaPageView from "./components/GaPageView";
 import Footer from "./contents/Footer";
 
 import "./globals.css";
@@ -28,11 +30,27 @@ export default function RootLayout({
   return (
     <html lang="ja">
       <head>
+        <Script
+          src={
+            "https://www.googletagmanager.com/gtag/js" +
+            "?id=G-VJK2NXLX64"
+          }
+          strategy="afterInteractive"
+        />
+        <Script id="ga4-init" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-VJK2NXLX64');
+          `}
+        </Script>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=BIZ+UDPMincho&display=swap" rel="stylesheet" />
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
+        <GaPageView />
         {children}
         <Footer />
       </body>

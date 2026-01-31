@@ -13,4 +13,4 @@
 :HL["/images/temawashi4.png","image"]
 :HL["/images/temawashi5.png","image"]
 :HL["/images/craft_hokkori_market.png","image"]
-0:{"buildId":"DXbtL2Hy4lrGUk2bnquur","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":true},"staleTime":300}
+0:{"buildId":"_doU--mWhs43oPKdZ4prB","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":true},"staleTime":300}
