@@ -19,16 +19,17 @@
         width: 350px;
     }
 }
-.hero_title {
+.hero_title_link {
     font-family: 'BIZ UDPMincho', serif;
     font-size: 48px;
     font-weight: 600;
-    color: #b33;
+    color: #b33 !important;
     text-shadow:
         2px  2px 4px #fff,
         2px -2px 4px #fff,
         -2px  2px 4px #fff,
         -2px -2px 4px #fff;
+    text-decoration: none;
 }
 .hero_title_sub {
     font-family: 'BIZ UDPMincho', serif;

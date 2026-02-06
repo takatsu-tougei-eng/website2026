@@ -1,4 +1,4 @@
-import styles from "./Hero.module.css";
+import styles from "./HeroSimple.module.css";
 
 export default function Hero() {
     const subTitle = "～ 人間国宝・濱田庄司の志と本場「益子焼」の匠の技を体験 ～";
@@ -14,8 +14,10 @@ export default function Hero() {
                 <div className={styles.speech_bubble}>
                     益子焼
                 </div>
-                <h1 className={styles.hero_title}>
-                    陶芸匠フェスタ in 高津
+                <h1>
+                    <a href="/" className={styles.hero_title_link}>
+                        陶芸匠フェスタ in 高津
+                    </a>
                 </h1>
             </div>
         </div>
