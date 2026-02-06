@@ -128,7 +128,7 @@ export default function PressReleasePage() {
                                     </div>
                                     <div className={styles.event_detail_row}>
                                         <dt>体験チケット販売サイト</dt>
-                                        <dd><a href="https://takatsu-mashiko.stores.jp" target="_blank">https://takatsu-mashiko.stores.jp</a></dd>
+                                        <dd><a href="https://takatsu-mashiko.stores.jp/" target="_blank">https://takatsu-mashiko.stores.jp/</a></dd>
                                     </div>
                                 </dl>
                             </div>

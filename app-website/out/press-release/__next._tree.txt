@@ -5,4 +5,4 @@
 :HL["/_next/static/chunks/fa1e6d1f30a5d396.css","style"]
 :HL["https://fonts.googleapis.com/css2?family=BIZ+UDPMincho&display=swap","style"]
 :HL["/images/header_bar_background.png","image"]
-0:{"buildId":"jjshosBDFqJ3tCqcoNSCw","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"press-release","paramType":null,"paramKey":"press-release","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":false}},"isRootLayout":true},"staleTime":300}
+0:{"buildId":"_RtzZ8_xdrjiypQzoYX1g","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"press-release","paramType":null,"paramKey":"press-release","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":false}},"isRootLayout":true},"staleTime":300}
