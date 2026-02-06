@@ -3,9 +3,16 @@ import styles from "./Footer.module.css";
 export default function Footer() {
     const footerContents = {
         plan: "企画・運営： 高津陶芸イベント実行委員会",
-        sponsor: "後援： 川崎市高津区役所、大山街道アクションフォーラム運営委員会「まちの企画室」",
-        contact: "お問い合わせ： machi.kikaku.worldcafe@gmail.com",
+        organizer: "主催： まちの企画室",
+        sponsor: "後援： 川崎市高津区役所",
+        contact: "お問い合わせ： takatsu.mashiko@gmail.com",
     }
+    const footerLinks = [
+        {
+            label: "プレスリリース",
+            url: "/press-release",
+        },
+    ];
 
     return (
         <div className={styles.footer}>
@@ -19,6 +26,13 @@ export default function Footer() {
                     <div key={key}>
                         {value}
                     </div>
+                ))}
+            </div>
+            <div className={styles.footer_links}>
+                {footerLinks.map((link) => (
+                    <a key={link.label} href={link.url} className={styles.footer_links_link}>
+                        {link.label}
+                    </a>
                 ))}
             </div>
         </div>

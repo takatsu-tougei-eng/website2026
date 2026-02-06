@@ -111,7 +111,10 @@ export default function Home() {
         <EventMap />
 
         <a id="workshop" />
-        <HeaderLine title="体験ワークショップ" />
+        <HeaderLine
+          title="体験ワークショップ"
+          description="選べる2つの陶芸体験！本格的な『電動ロクロ』と、じっくり向き合う『手回しロクロ』、それぞれのコースをご用意しました。"
+        />
         <WorkshopContent
           {...workshopContent[0]}
         />

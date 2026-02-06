@@ -2,9 +2,10 @@ import styles from "./HeaderLine.module.css";
 
 interface HeaderLineProps {
     title: string;
+    description?: string;
 }
 
-export default function HeaderLine({ title }: HeaderLineProps) {
+export default function HeaderLine({ title, description }: HeaderLineProps) {
     return (
         <div className={styles.header_line}>
             <h1 className={styles.header_line_title}>
@@ -12,6 +13,11 @@ export default function HeaderLine({ title }: HeaderLineProps) {
                     {title}
                 </span>
             </h1>
+            {description && (
+                <p className={styles.header_line_description}>
+                    {description}
+                </p>
+            )}
         </div>
     )
 }

@@ -1,5 +1,4 @@
 .header_line {
-    width: 100%;
     margin-top: 30px;
     margin-left: 10px;
 }
@@ -44,7 +43,7 @@
 .title_text {
     display: inline-block;
     margin-left: 30px;
-    margin-right: 5px;
+    margin-right: 10px;
     position: relative;
     z-index: 1;
     line-height: 1.4;
@@ -53,5 +52,16 @@
     .title_text {
         margin-left: 15px;
         line-height: 1.1;
+    }
+}
+
+.header_line_description {
+    margin-left: 56px;
+    margin-right: 20px;
+    margin-top: -10px;
+}
+@media (max-width: 768px) {
+    .header_line_description {
+        margin-left: 15px;
     }
 }

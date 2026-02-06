@@ -5,6 +5,7 @@
     margin: 70px 0 0 0;
     background-color: var(--basic-color);
     padding: 50px 20px;
+    gap: 20px;
 }
 .footer_logo {
     width: 50px;
@@ -15,6 +16,10 @@
 .footer_contents {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 3px;
     font-size: 14px;
+}
+.footer_links_link {
+    font-size: 14px;
+    text-decoration:none;
 }
