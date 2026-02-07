@@ -3,7 +3,7 @@ import styles from "./EventMap.module.css";
 export const EventMap = () => {
     return (
         <div className={styles.event_map}>
-            <h2>開催日時・会場</h2>
+            <h2 className="sub_title">開催日時・会場</h2>
             <div className={styles.event_map_container}>
                 <div className={styles.event_map_item}>
                     <div className={styles.event_map_item_content_container}>

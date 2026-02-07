@@ -4,6 +4,7 @@ import { EventMap } from "@/app/contents/EventMap";
 import SubmitButtonArea from "@/app/contents/SubmitButtonArea";
 import HeaderLine from "@/app/contents/HeaderLine";
 import TextDescription from "@/app/contents/TextDescription";
+import TextDescription2 from "@/app/contents/TextDescription2";
 import WorkshopContent, { WorkshopContentProps } from "@/app/contents/WorkshopContent";
 import PhotoAndTextDescription, { PhotoAndTextDescriptionProps } from "@/app/contents/PhotoAndTextDescription";
 
@@ -23,6 +24,12 @@ export default function Home() {
     "「クラフトほっこりマーケット」も同時開催。\n" +
     "陶芸だけでなく、ものづくりや人との出会いを\n" +
     "ゆったりと楽しめる一日です。"
+  ];
+  const textDescriptoin2 = [
+    "本イベントで益子焼を扱うのは、この陶芸が持つ考え方が、高津というまちの歴史と深くつながっているからです。",
+    "益子焼を代表する陶芸家であり、人間国宝でもある濱田庄司は、現在の川崎市高津区溝口に生まれ、幼少期をこの地で過ごしました。",
+    "彼が後に大切にした「用の美」や「健やかな暮らしの中にある美しさ」は、この土地での生活体験を原点として形づくられたものだと言われています。",
+    "その思想を受け継ぐ益子焼を、ゆかりのある高津の地で体験してもらうこと。それが、このフェスタの大きなテーマのひとつです。",
   ];
 
   const workshopContent: WorkshopContentProps[] = [
@@ -53,7 +60,7 @@ export default function Home() {
     },
     {
       title: "手回しロクロ体験",
-      description: "大人数で気軽に陶芸の楽しさを味わえる、手回しロクロ体験です。",
+      description: "大人数で気軽に陶芸の楽しさを味わえる、手回しロクロ体験です。初めての方でも、完成度を気にせず、陶芸そのものを楽しんでいただけます。",
       date: "2026年3月8日(日)",
       timeSchedule: [
         ["10:00","11:00"],
@@ -83,6 +90,33 @@ export default function Home() {
     },
   ];
 
+  const whyTakatsuContent = [
+    {
+      texts: [
+        "私たちがこの場所でイベントを開催するのには、特別な理由があります。それは、この会場である大山街道ふるさと館が、世界的な陶芸家であり初の人間国宝となった **濱田庄司（1894-1978）が生まれ育った家（菓子屋「大和屋」）の跡地** そのものだからです。",
+        "濱田は幼少期をこの高津の豊かな自然の中で過ごし、後に **「田舎は健康な心の根づくところ」** と振り返っています。かつてこの地で濱田が育んだ「創る楽しさ」を、現代の大人や子供たちにも肌で感じてほしい。そんな願いから、この体験イベントは企画されました。",
+      ]
+    },
+    {
+      title: "日常を彩る「用の美」を、自分の手で",
+      texts: [
+        "濱田庄司が一生をかけて大切にしたのが **「用の美」** という考え方です。",
+        "これは、美術館に飾るような特別なものではなく、**「毎日の暮らしの中で、実際に使われる道具の中にこそ、本当の美しさが宿る」** という教えです。",
+        "* 自分でお茶を飲むためのカップ",
+        "* 家族でごはんを食べるための取り皿",
+        "自分で作った不格好な器でも、実際に暮らしの中で使ってみることで、道具への愛着や「用の美」の本質が見えてきます。",
+      ]
+    },
+    {
+      title: "「手」が教えるものづくりの喜び",
+      texts: [
+        "濱田は **「いいものは頭ではなく手が作る」** と考え、生涯、手仕事の力を信じ続けました。",
+        "このフェスタにプロの職人の器は並びません。主役は、参加する皆さん一人ひとりの「手」です。",
+        "濱田庄司を生んだこのゆかりの地で、土に触れ、自分だけの「暮らしの道具」を創り出す。そんな健やかでクリエイティブな時間を、親子で、そして地域の皆で楽しんでみませんか？",
+      ]
+    }
+  ];
+
   const hokkoriMarketContent: PhotoAndTextDescriptionProps = {
     descriptions: [
         "「ほっこり温かな気持ちで家路についてほしい」という想いを持つ、" +
@@ -107,6 +141,14 @@ export default function Home() {
           description={textDescription}
           imagePath="/images/experience_image.png"
         />
+        <TextDescription2
+          subTitle="なぜ益子焼なのか、なぜ高津なのか"
+          description={textDescriptoin2}
+          imagePath="/images/hamada_shoji.jpg"
+          imageAlt="濱田庄司"
+          floatDirection="left"
+          useImage={false}
+        />
         <EventMap />
 
         <a id="workshop" />
@@ -120,6 +162,16 @@ export default function Home() {
         <WorkshopContent
           {...workshopContent[1]}
         />
+
+        <HeaderLine title="濱田庄司が育んだ「暮らしの美」を体験する" />
+        {whyTakatsuContent.map((item, i) => (
+          <TextDescription2
+            key={i}
+            subTitle={item.title}
+            description={item.texts}
+            useImage={false}
+          />
+        ))}
         
         <HeaderLine title="クラフトほっこりマーケット" />
         <PhotoAndTextDescription

@@ -1,0 +1,32 @@
+.text_description2_sub_title {
+    background-color: var(--subtitle-background-color);
+}
+
+.text_description2 {
+    margin: 10px 50px;
+}
+
+.text_description2_content_container {
+    margin: 0 20px;
+}
+
+.text_description2_img_container {
+    width: 150px;
+}
+.text_description2_img_container img {
+    width: 100%;
+}
+.text_description2_img_container_float_left {
+    float: left;
+    margin-right: 20px;
+}
+.text_description2_img_container_float_right {
+    float: right;
+    margin-left: 20px;
+}
+
+/* テキスト */
+.text_description2_text_container p {
+    /* パラグラフの先頭の字下げ */
+    text-indent: 0.6em;
+}
