@@ -6,7 +6,7 @@ interface TextDescriptionProps {
 }
 export default function TextDescription({ description, imagePath }: TextDescriptionProps) {
     // 改行を<br>に変換
-    const descriptionWithBr = description.map(item => item.replace(/\n/g, "<br />"));
+    const descriptionWithBr = description.map(item => item.replace(/\n/g, "<br class='br_pc' />"));
     // 要素ごとに<p>で囲む
     const descriptionWithP = descriptionWithBr.map(item => `<p>${item}</p>`);
 

@@ -44,3 +44,13 @@ body {
   margin-top: 30px;
   margin-bottom: 10px;
 }
+
+/* PC版のみ改行する（<br />に設定するクラス） */
+.br_pc {
+  display: inline;
+}
+@media (max-width: 768px) {
+  .br_pc {
+    display: none;
+  }
+}

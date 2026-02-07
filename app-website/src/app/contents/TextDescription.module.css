@@ -9,7 +9,7 @@
 @media (max-width: 768px) {
     .text_description {
         flex-direction: column;
-        margin: 10px 15px;
+        margin: 10px 25px;
     }
 }
 

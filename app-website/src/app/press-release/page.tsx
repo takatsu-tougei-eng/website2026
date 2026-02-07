@@ -43,7 +43,7 @@ export default function PressReleasePage() {
                         </p>
                         <hr className={styles.content_hr} />
                         <img
-                            src="/images/press_release/S__65839119_0.jpg"
+                            src="/images/press_release/S__65839119_1.png"
                             alt="press release image"
                             className={styles.content_center_image}
                         />
@@ -52,7 +52,7 @@ export default function PressReleasePage() {
                             <div
                                 className={styles.side_image_link_container}
                             >
-                                <a href="/images/press_release/2026_flyer.png" target="_blank">
+                                <a href="/pdf/2026_flyer.pdf" target="_blank">
                                     <img
                                         src="/images/press_release/2026_flyer.png"
                                         alt="2026 flyer image"
@@ -60,7 +60,7 @@ export default function PressReleasePage() {
                                     />
                                 </a>
                                 <div className={styles.side_image_link_text}>
-                                    pdfをダウンロードできます
+                                    pdfダウンロード
                                 </div>
                             </div>
                             <p className={styles.content_paragraph}>

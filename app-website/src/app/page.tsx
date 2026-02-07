@@ -7,6 +7,7 @@ import TextDescription from "@/app/contents/TextDescription";
 import TextDescription2 from "@/app/contents/TextDescription2";
 import WorkshopContent, { WorkshopContentProps } from "@/app/contents/WorkshopContent";
 import PhotoAndTextDescription, { PhotoAndTextDescriptionProps } from "@/app/contents/PhotoAndTextDescription";
+import Flyers from "@/app/contents/Flyers";
 
 import styles from "./page.module.css";
 
@@ -177,6 +178,9 @@ export default function Home() {
         <PhotoAndTextDescription
           {...hokkoriMarketContent}
         />
+
+        <HeaderLine title="広報用チラシ" description="pdfをダウンロードできます" />
+        <Flyers />
       </main>
     </div>
   );

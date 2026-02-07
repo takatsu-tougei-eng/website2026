@@ -1,0 +1,33 @@
+.flyers_container {
+    margin: 10px 50px;
+}
+.one_flyer_container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+.flyer_image_container {
+    display: flex;
+    flex-direction: column;
+}
+
+.flyer_image {
+    width: 200px;
+    height: auto;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5);
+    transition: transform 180ms ease, box-shadow 180ms ease;
+    will-change: transform;
+}
+.flyer_image:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 16px -4px rgba(0, 0, 0, 0.45);
+}
+@media (prefers-reduced-motion: reduce) {
+    .flyer_image {
+        transition: none;
+    }
+    .flyer_image:hover {
+        transform: none;
+    }
+}
