@@ -1,5 +1,4 @@
 .event_overview {
-    width: 100%;
     background-color: #ddd;
     display: flex;
     flex-direction: column;
@@ -10,8 +9,15 @@
 .event_overview_dl {
     display: flex;
     flex-wrap: wrap;
-    gap: .5em;
+    gap: 20px;
     margin: 0;
+}
+@media screen and (max-width: 768px) {
+    .event_overview_dl {
+        gap: 5px;
+        flex-direction: column;
+        align-items: center;
+    }
 }
 .event_overview_dl > div {
     display: inline-flex;
@@ -24,9 +30,6 @@
 
 .event_overview_dl dd {
     margin: 0;
-}
-.event_overview_dl > div:not(:last-child)::after {
-    content: "、";
 }
 .event_overview_dl dt::after {
     content: ":";
