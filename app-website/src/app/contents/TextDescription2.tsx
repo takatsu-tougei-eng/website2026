@@ -8,7 +8,7 @@ import ReactMarkdown from "react-markdown";
 import styles from "./TextDescription2.module.css";
 
 
-interface TextDescription2Props {
+export interface TextDescription2Props {
     subTitle?: string;
     description: string[];
     imagePath?: string;

@@ -4,7 +4,7 @@ import { EventMap } from "@/app/contents/EventMap";
 import SubmitButtonArea from "@/app/contents/SubmitButtonArea";
 import HeaderLine from "@/app/contents/HeaderLine";
 import TextDescription from "@/app/contents/TextDescription";
-import TextDescription2 from "@/app/contents/TextDescription2";
+import TextDescription2, { TextDescription2Props } from "@/app/contents/TextDescription2";
 import WorkshopContent, { WorkshopContentProps } from "@/app/contents/WorkshopContent";
 import PhotoAndTextDescription, { PhotoAndTextDescriptionProps } from "@/app/contents/PhotoAndTextDescription";
 import Flyers from "@/app/contents/Flyers";
@@ -93,28 +93,37 @@ export default function Home() {
 
   const whyTakatsuContent = [
     {
-      texts: [
+      description: [
         "私たちがこの場所でイベントを開催するのには、特別な理由があります。それは、この会場である大山街道ふるさと館が、世界的な陶芸家であり初の人間国宝となった **濱田庄司（1894-1978）が生まれ育った家（菓子屋「大和屋」）の跡地** そのものだからです。",
-        "濱田は幼少期をこの高津の豊かな自然の中で過ごし、後に **「田舎は健康な心の根づくところ」** と振り返っています。かつてこの地で濱田が育んだ「創る楽しさ」を、現代の大人や子供たちにも肌で感じてほしい。そんな願いから、この体験イベントは企画されました。",
-      ]
+        "濱田は幼少期を高津の豊かな自然の中で過ごし、後に **「田舎は健康な心の根づくところ」** と振り返っています。かつてこの地で濱田が育んだ「創る楽しさ」を、現代の大人や子供たちにも肌で感じてほしい。そんな願いから、この体験イベントは企画されました。",
+      ],
+      useImage: false,
     },
     {
-      title: "日常を彩る「用の美」を、自分の手で",
-      texts: [
+      subTitle: "日常を彩る「用の美」を、自分の手で",
+      description: [
         "濱田庄司が一生をかけて大切にしたのが **「用の美」** という考え方です。",
         "これは、美術館に飾るような特別なものではなく、**「毎日の暮らしの中で、実際に使われる道具の中にこそ、本当の美しさが宿る」** という教えです。",
         "* 自分でお茶を飲むためのカップ",
         "* 家族でごはんを食べるための取り皿",
         "自分で作った不格好な器でも、実際に暮らしの中で使ってみることで、道具への愛着や「用の美」の本質が見えてきます。",
-      ]
+      ],
+      useImage: true,
+      imagePath: "/images/hamada4.jpeg",
+      imageAlt: "濱田窯の益子焼",
+      floatDirection: "left",
     },
     {
-      title: "「手」が教えるものづくりの喜び",
-      texts: [
+      subTitle: "「手」が教えるものづくりの喜び",
+      description: [
         "濱田は **「いいものは頭ではなく手が作る」** と考え、生涯、手仕事の力を信じ続けました。",
         "このフェスタにプロの職人の器は並びません。主役は、参加する皆さん一人ひとりの「手」です。",
         "濱田庄司を生んだこのゆかりの地で、土に触れ、自分だけの「暮らしの道具」を創り出す。そんな健やかでクリエイティブな時間を、親子で、そして地域の皆で楽しんでみませんか？",
-      ]
+      ],
+      useImage: true,
+      imagePath: "/images/hamada5.png",
+      imageAlt: "ろくろで作る器",
+      floatDirection: "right",
     }
   ];
 
@@ -145,10 +154,10 @@ export default function Home() {
         <TextDescription2
           subTitle="なぜ益子焼なのか、なぜ高津なのか"
           description={textDescriptoin2}
-          imagePath="/images/hamada_shoji.jpg"
+          imagePath="/images/hamada_shoji2.png"
           imageAlt="濱田庄司"
           floatDirection="left"
-          useImage={false}
+          useImage={true}
         />
         <EventMap />
 
@@ -168,9 +177,7 @@ export default function Home() {
         {whyTakatsuContent.map((item, i) => (
           <TextDescription2
             key={i}
-            subTitle={item.title}
-            description={item.texts}
-            useImage={false}
+            {...item as TextDescription2Props}
           />
         ))}
         
