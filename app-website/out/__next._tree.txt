@@ -14,4 +14,4 @@
 :HL["/images/temawashi5.png","image"]
 :HL["/images/craft_hokkori_market.png","image"]
 :HL["/images/press_release/2026_flyer.png","image"]
-0:{"buildId":"ToP9Z9rPjRFOzG35z9PFp","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":true},"staleTime":300}
+0:{"buildId":"6XD9OqFxX8kzi46fw-FW-","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":true},"staleTime":300}
