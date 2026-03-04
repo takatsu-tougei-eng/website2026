@@ -44,6 +44,7 @@ export default function TextDescription2({
                     ].join(" ")}
                 >
                     <img src={imagePath} alt={imageAlt} />
+                    <div className={styles.text_description2_img_container_caption}>写真提供：<a href="https://hamadagama.net/">濱田窯</a></div>
                 </div>
                 )}
                 <div className={styles.text_description2_text_container}>

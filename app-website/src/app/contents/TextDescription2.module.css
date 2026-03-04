@@ -22,6 +22,7 @@
 
 .text_description2_img_container {
     width: 200px;
+    text-align: center;
 }
 .text_description2_img_container img {
     width: 100%;
@@ -34,8 +35,18 @@
     float: right;
     margin-left: 20px;
 }
+.text_description2_img_container_caption {
+    font-size: 14px;
+    color: #666;
+    height: 20px;
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
 
 /* テキスト */
+.text_description2_text_container {
+    min-height: 233.66px;
+}
 .text_description2_text_container p {
     /* パラグラフの先頭の字下げ */
     text-indent: 0.6em;
