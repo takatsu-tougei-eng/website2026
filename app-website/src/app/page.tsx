@@ -49,7 +49,7 @@ export default function Home() {
       place: "ふるさと館 ３階 会議室",
       capacity: [8, 8, 14],
       price: "6,800円/名",
-      deadline: "3月6日(金)",
+      deadline: "3月7日(土) 20時",
       applicationTitle: "電動ロクロ体験 登録",
       applicationURL: "https://takatsu-mashiko.stores.jp/?category_id=697e03a6d648d1e6f7980159",
       notes: [
@@ -73,7 +73,7 @@ export default function Home() {
       place: "ふるさと館 ２階 イベントホール",
       capacity: [50, 50, 50, 50, 50],
       price: "4,800円/名",
-      deadline: "3月6日(金)",
+      deadline: "3月7日(土) 20時",
       applicationTitle: "手回しロクロ体験 登録",
       applicationURL: "https://takatsu-mashiko.stores.jp/?category_id=697e03b1e8c4f832621a74ca",
       notes: [

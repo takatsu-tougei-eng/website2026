@@ -126,9 +126,11 @@ export default function WorkshopContent({
                         <div>
                             場所： {place}
                         </div>
+                        {/*
                         <div>
                             申込期限： {deadline}
                         </div>
+                        */}
                     </div>
                 </div>
                 <div className={styles.workshop_content_notes_container}>
